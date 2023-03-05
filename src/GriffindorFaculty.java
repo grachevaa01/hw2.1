@@ -1,10 +1,10 @@
-public class Griffindorfaculty extends Facultaties {
+public class GriffindorFaculty extends Hogwarts {
     private int selfSacrifice;
     private int courage;
     private int foxery;
 
-    public Griffindorfaculty(int levelOfMagic, int distance, int selfSacrifice, int courage, int foxery) {
-        super(levelOfMagic, distance);
+    public GriffindorFaculty(String name, int levelOfMagic, int distance, int selfSacrifice, int courage, int foxery) {
+        super(name, levelOfMagic, distance);
         this.selfSacrifice = selfSacrifice;
         this.courage = courage;
         this.foxery = foxery;
@@ -36,16 +36,24 @@ public class Griffindorfaculty extends Facultaties {
     private int calculatelevelOfMagic(){
         return this.selfSacrifice + this.courage + this.foxery;
     }
-    public boolean compare (Griffindorfaculty griffindorfaculty){
-        return this.calculatelevelOfMagic() > griffindorfaculty.calculatelevelOfMagic();
+    public void compare (GriffindorFaculty griffindorfaculty){
+        if (this.calculatelevelOfMagic() > griffindorfaculty.calculatelevelOfMagic()){
+            System.out.println(this.getName() + " лучше чем " + griffindorfaculty.getName());
+        }
+        else {
+            System.out.println(griffindorfaculty.getName() + " лучше чем " + this.getName());
+        }
     }
 
     @Override
     public String toString() {
-        return "Griffindorfaculty{" +
-                "selfSacrifice=" + selfSacrifice +
-                ", courage=" + courage +
-                ", foxery=" + foxery +
+        return " GriffindorFaculty {" +
+                "selfSacrifice = " +
+                selfSacrifice +
+                ", courage = " +
+                courage +
+                ", foxery = " +
+                foxery +
                 '}' + super.toString();
     }
 }

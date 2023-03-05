@@ -1,10 +1,10 @@
-public class HufflePuffaculty extends Facultaties {
+public class HufflePuffFaculty extends Hogwarts {
     private int patience;
     private int loyalty;
     private int honesty;
 
-    public HufflePuffaculty(int levelOfMagic, int distance, int patience, int loyalty, int honesty) {
-        super(levelOfMagic, distance);
+    public HufflePuffFaculty(String name, int levelOfMagic, int distance, int patience, int loyalty, int honesty) {
+        super(name, levelOfMagic, distance);
         this.patience = patience;
         this.loyalty = loyalty;
         this.honesty = honesty;
@@ -36,16 +36,24 @@ public class HufflePuffaculty extends Facultaties {
     private int calculatelevelOfMagic(){
         return this.patience + this.loyalty + this.honesty;
     }
-    public boolean compare (HufflePuffaculty hufflePuffaculty){
-        return this.calculatelevelOfMagic() > hufflePuffaculty.calculatelevelOfMagic();
+    public void compare (HufflePuffFaculty hufflePuffaculty){
+        if (this.calculatelevelOfMagic() > hufflePuffaculty.calculatelevelOfMagic()){
+            System.out.println(this.getName() + " лучше чем " + hufflePuffaculty.getName());
+        }
+        else {
+            System.out.println(hufflePuffaculty.getName() + " лучше чем " + this.getName());
+        }
     }
 
     @Override
     public String toString() {
-        return "HufflePuffaculty{" +
-                "patience=" + patience +
-                ", loyalty=" + loyalty +
-                ", honesty=" + honesty +
+        return " HufflePuffFaculty {" +
+                "patience = " +
+                patience +
+                ", loyalty = " +
+                loyalty +
+                ", honesty = " +
+                honesty +
                 '}'+ super.toString();
     }
 }

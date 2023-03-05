@@ -1,10 +1,10 @@
-public class Slytherinfaculty extends Facultaties {
+public class SlytherinFaculty extends Hogwarts {
     private int quirkiness;
     private int darkMagic;
     private int intellect;
 
-    public Slytherinfaculty(int levelOfMagic, int distance, int quirkiness, int darkMagic, int intellect) {
-        super(levelOfMagic, distance);
+    public SlytherinFaculty(String name, int levelOfMagic, int distance, int quirkiness, int darkMagic, int intellect) {
+        super(name , levelOfMagic, distance);
         this.quirkiness = quirkiness;
         this.darkMagic = darkMagic;
         this.intellect = intellect;
@@ -36,19 +36,27 @@ public class Slytherinfaculty extends Facultaties {
     private int calculatelevelOfMagic(){
         return this.quirkiness + this.darkMagic + this.intellect;
     }
-    public boolean compare (Slytherinfaculty slytherinfaculty){
-        return this.calculatelevelOfMagic() > slytherinfaculty.calculatelevelOfMagic();
+    public void compare (SlytherinFaculty slytherinfaculty){
+        if (this.calculatelevelOfMagic() > slytherinfaculty.calculatelevelOfMagic()){
+            System.out.println(this.getName() + " лучше чем " + slytherinfaculty.getName());
+        }
+        else {
+            System.out.println(slytherinfaculty.getName() + " лучше чем " + this.getName());
+        }
     }
 
     @Override
     public String toString() {
-        return "Slytherinfaculty{" +
-                "Facultaties = "
+        return " SlytherinFaculty {" +
+                "Hogwarts = "
                 + super.toString()
                 +
-                "quirkiness=" + quirkiness +
-                ", darkMagic=" + darkMagic +
-                ", intellect=" + intellect +
+                " quirkiness = " +
+                quirkiness +
+                ", darkMagic = "
+                + darkMagic +
+                ", intellect = " +
+                intellect +
                 '}';
     }
 }
