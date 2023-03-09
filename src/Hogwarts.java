@@ -30,10 +30,11 @@ public abstract class Hogwarts {
     }
 
     public void compare (Hogwarts hogwarts){
-        if (this.levelOfMagic > this.distance){
+        if ((this.levelOfMagic + this.distance)> (hogwarts.levelOfMagic + hogwarts.distance)){
             System.out.println(this.getName() + " лучше чем " + hogwarts.getName());
-        }
-        else {
+        } else if ((this.levelOfMagic + this.distance) == (hogwarts.levelOfMagic + hogwarts.distance)){
+            System.out.println(this.getName() + " равен " + hogwarts.getName());
+        } else {
             System.out.println(hogwarts.getName() + " лучше чем " + this.getName());
         }
     }

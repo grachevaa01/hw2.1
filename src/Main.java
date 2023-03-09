@@ -10,8 +10,6 @@ public class Main {
         blazeZabini.compare(theodorNott);
         dracoMalfoy.compare(blazeZabini);
         germionaGranger.compare(ronWisley);
-
-
     }
 
 }
