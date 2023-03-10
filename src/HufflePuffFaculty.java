@@ -38,10 +38,11 @@ public class HufflePuffFaculty extends Hogwarts {
     }
     public void compare (HufflePuffFaculty hufflePuffaculty){
         if (this.calculatelevelOfMagic() > hufflePuffaculty.calculatelevelOfMagic()){
-            System.out.println(this.getName() + " лучше чем " + hufflePuffaculty.getName());
-        }
-        else {
-            System.out.println(hufflePuffaculty.getName() + " лучше чем " + this.getName());
+            System.out.println(this.getName() + " лучший Пуффендуец чем " + hufflePuffaculty.getName());
+        } else if (this.calculatelevelOfMagic() == hufflePuffaculty.calculatelevelOfMagic()){
+            System.out.println(this.getName() + " равны " + hufflePuffaculty.getName());
+        } else {
+            System.out.println(hufflePuffaculty.getName() + " лучший Пуффендуец чем " + this.getName());
         }
     }
 

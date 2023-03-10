@@ -38,10 +38,11 @@ public class SlytherinFaculty extends Hogwarts {
     }
     public void compare (SlytherinFaculty slytherinfaculty){
         if (this.calculatelevelOfMagic() > slytherinfaculty.calculatelevelOfMagic()){
-            System.out.println(this.getName() + " лучше чем " + slytherinfaculty.getName());
-        }
-        else {
-            System.out.println(slytherinfaculty.getName() + " лучше чем " + this.getName());
+            System.out.println(this.getName() + " лучший Слизиринец чем  " + slytherinfaculty.getName());
+        } else if (this.calculatelevelOfMagic() == slytherinfaculty.calculatelevelOfMagic()){
+            System.out.println(this.getName() + " равны " + slytherinfaculty.getName());
+        } else {
+            System.out.println(slytherinfaculty.getName() + " лучший Слизиринец чем " + this.getName());
         }
     }
 

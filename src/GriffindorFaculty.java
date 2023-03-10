@@ -1,13 +1,13 @@
 public class GriffindorFaculty extends Hogwarts {
     private int selfSacrifice;
     private int courage;
-    private int foxery;
+    private int nobility;
 
     public GriffindorFaculty(String name, int levelOfMagic, int distance, int selfSacrifice, int courage, int foxery) {
         super(name, levelOfMagic, distance);
         this.selfSacrifice = selfSacrifice;
         this.courage = courage;
-        this.foxery = foxery;
+        this.nobility = nobility;
     }
 
     public int getSelfSacrifice() {
@@ -27,21 +27,22 @@ public class GriffindorFaculty extends Hogwarts {
     }
 
     public int getFoxery() {
-        return foxery;
+        return nobility;
     }
 
-    public void setFoxery(int foxery) {
-        this.foxery = foxery;
+    public void setNobility(int nobility) {
+        this.nobility = nobility;
     }
     private int calculatelevelOfMagic(){
-        return this.selfSacrifice + this.courage + this.foxery;
+        return this.selfSacrifice + this.courage + this.nobility;
     }
     public void compare (GriffindorFaculty griffindorfaculty){
         if (this.calculatelevelOfMagic() > griffindorfaculty.calculatelevelOfMagic()){
-            System.out.println(this.getName() + " лучше чем " + griffindorfaculty.getName());
-        }
-        else {
-            System.out.println(griffindorfaculty.getName() + " лучше чем " + this.getName());
+            System.out.println(this.getName() + " лучший Гриффиндорец чем " + griffindorfaculty.getName());
+        } else if  (this.calculatelevelOfMagic() == griffindorfaculty.calculatelevelOfMagic()){
+            System.out.println(this.getName() + " равны " + griffindorfaculty.getName());
+        } else {
+            System.out.println(griffindorfaculty.getName() + " лучший Гриффиндорец чем " + this.getName());
         }
     }
 
@@ -52,8 +53,8 @@ public class GriffindorFaculty extends Hogwarts {
                 selfSacrifice +
                 ", courage = " +
                 courage +
-                ", foxery = " +
-                foxery +
+                ", nobility = " +
+                nobility +
                 '}' + super.toString();
     }
 }

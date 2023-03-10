@@ -38,10 +38,11 @@ public class RavenClawFaculty extends Hogwarts {
     }
     public void compare (RavenClawFaculty ravenClawfaculty){
         if (this.calculatelevelOfMagic() > ravenClawfaculty.calculatelevelOfMagic()){
-            System.out.println(this.getName() + " лучше чем " + ravenClawfaculty.getName());
-        }
-        else {
-            System.out.println(ravenClawfaculty.getName() + " лучше чем " + this.getName());
+            System.out.println(this.getName() + " лучший Когтевранец чем " + ravenClawfaculty.getName());
+        } else if (this.calculatelevelOfMagic() == ravenClawfaculty.calculatelevelOfMagic()){
+            System.out.println(this.getName() + " равны " + ravenClawfaculty.getName());
+        } else {
+            System.out.println(ravenClawfaculty.getName() + " лучший Когтевранец чем " + this.getName());
         }
     }
 
